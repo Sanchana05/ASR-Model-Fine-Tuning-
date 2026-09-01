@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Teaching Whisper to Understand Hindi — On a Free GPU
 
 ## Why this project exists
@@ -127,3 +128,6 @@ fundamental limitation — it's a training data gap, and training data gaps
 are fixable. You don't need a data-center GPU cluster to make a dent in
 that. You need a good open dataset, a few well-chosen efficiency tricks,
 and a free Colab notebook.
+=======
+# ASR-Model-Fine-Tuning-
+>>>>>>> 2ed7e2f1735321377968021726435522a6a533b7

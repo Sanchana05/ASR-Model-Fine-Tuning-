@@ -1,0 +1,13 @@
+﻿__pycache__/
+*.pyc
+.ipynb_checkpoints/
+whisper-small-shrutilipi-*/
+*.safetensors
+*.bin
+*.pt
+*.ckpt
+.cache/
+*.log
+runs/
+.env
+venv/

@@ -1,0 +1,23 @@
+# Core HF stack
+transformers==4.44.2
+datasets==2.20.0
+accelerate==0.33.0
+evaluate==0.4.2
+
+# PEFT / quantization for fitting Whisper on a 16GB T4
+peft==0.12.0
+bitsandbytes==0.43.3
+
+# Audio processing
+librosa==0.10.2
+soundfile==0.12.1
+
+# Metrics
+jiwer==3.0.4
+indic-nlp-library==0.92   # normalization for Indic scripts (Hindi, Marathi, etc.)
+
+# Inference UI
+gradio==4.44.0
+
+# Misc
+tensorboard==2.17.1

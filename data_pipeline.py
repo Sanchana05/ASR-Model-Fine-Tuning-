@@ -105,6 +105,11 @@ def load_shrutilipi_streaming():
         "audio", Audio(sampling_rate=config.SAMPLING_RATE)
     )
 
+    # Some Shrutilipi entries point at broken/missing audio files and decode
+    # to None instead of raising -- drop those before they reach .map(),
+    # since prepare_example indexes into audio["array"] unconditionally.
+    train_stream = train_stream.filter(lambda ex: ex["audio"] is not None)
+
     # Shrutilipi's public loader may not expose a separate "validation"
     # split; carve one out of the (infinite, streamed) train iterator.
     eval_stream = train_stream.take(config.MAX_EVAL_SAMPLES)

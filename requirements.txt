@@ -1,23 +1,29 @@
 # Core HF stack
-transformers==4.44.2
-datasets==2.20.0
-accelerate==0.33.0
-evaluate==0.4.2
+# Minimum-version pins (not exact ==) so pip can pick wheels already built
+# for the host's Python version instead of forcing old exact versions that
+# have no prebuilt wheel (e.g. numpy 1.26.4 has none for Python 3.13, which
+# Colab now ships by default, and pip falls back to a slow/broken source
+# build). Exact versions below are what this pipeline was originally
+# developed against; newer compatible releases are expected to work.
+transformers>=4.44.2
+datasets>=2.20.0
+accelerate>=0.33.0
+evaluate>=0.4.2
 
 # PEFT / quantization for fitting Whisper on a 16GB T4
-peft==0.12.0
-bitsandbytes==0.43.3
+peft>=0.12.0
+bitsandbytes>=0.43.3
 
 # Audio processing
-librosa==0.10.2
-soundfile==0.12.1
+librosa>=0.10.2
+soundfile>=0.12.1
 
 # Metrics
-jiwer==3.0.4
-indic-nlp-library==0.92   # normalization for Indic scripts (Hindi, Marathi, etc.)
+jiwer>=3.0.4
+indic-nlp-library>=0.92   # normalization for Indic scripts (Hindi, Marathi, etc.)
 
 # Inference UI
-gradio==4.44.0
+gradio>=4.44.0
 
 # Misc
-tensorboard==2.17.1
+tensorboard>=2.17.1
